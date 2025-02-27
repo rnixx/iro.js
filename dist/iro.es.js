@@ -5,7 +5,7 @@
  * github.com/jaames/iro.js
  */
 
-var n,l,u,t,o,r,f,e={},c=[],s=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;function a(n,l){for(var u in l){ n[u]=l[u]; }return n}function h(n){var l=n.parentNode;l&&l.removeChild(n);}function v(l,u,i){var t,o,r,f={};for(r in u){ "key"==r?t=u[r]:"ref"==r?o=u[r]:f[r]=u[r]; }if(arguments.length>2&&(f.children=arguments.length>3?n.call(arguments,2):i),"function"==typeof l&&null!=l.defaultProps){ for(r in l.defaultProps){ void 0===f[r]&&(f[r]=l.defaultProps[r]); } }return y(l,f,t,o,null)}function y(n,i,t,o,r){var f={type:n,props:i,key:t,ref:o,__k:null,__:null,__b:0,__e:null,__d:void 0,__c:null,__h:null,constructor:void 0,__v:null==r?++u:r};return null==r&&null!=l.vnode&&l.vnode(f),f}function d(n){return n.children}function _(n,l){this.props=n,this.context=l;}function k(n,l){if(null==l){ return n.__?k(n.__,n.__.__k.indexOf(n)+1):null; }for(var u;l<n.__k.length;l++){ if(null!=(u=n.__k[l])&&null!=u.__e){ return u.__e; } }return "function"==typeof n.type?k(n):null}function b(n){var l,u;if(null!=(n=n.__)&&null!=n.__c){for(n.__e=n.__c.base=null,l=0;l<n.__k.length;l++){ if(null!=(u=n.__k[l])&&null!=u.__e){n.__e=n.__c.base=u.__e;break} }return b(n)}}function m(n){(!n.__d&&(n.__d=!0)&&t.push(n)&&!g.__r++||r!==l.debounceRendering)&&((r=l.debounceRendering)||o)(g);}function g(){for(var n;g.__r=t.length;){ n=t.sort(function(n,l){return n.__v.__b-l.__v.__b}),t=[],n.some(function(n){var l,u,i,t,o,r;n.__d&&(o=(t=(l=n).__v).__e,(r=l.__P)&&(u=[],(i=a({},t)).__v=t.__v+1,j(r,t,i,l.__n,void 0!==r.ownerSVGElement,null!=t.__h?[o]:null,u,null==o?k(t):o,t.__h),z(u,t),t.__e!=o&&b(t)));}); }}function w(n,l,u,i,t,o,r,f,s,a){var h,v,p,_,b,m,g,w=i&&i.__k||c,A=w.length;for(u.__k=[],h=0;h<l.length;h++){ if(null!=(_=u.__k[h]=null==(_=l[h])||"boolean"==typeof _?null:"string"==typeof _||"number"==typeof _||"bigint"==typeof _?y(null,_,null,null,_):Array.isArray(_)?y(d,{children:_},null,null,null):_.__b>0?y(_.type,_.props,_.key,null,_.__v):_)){if(_.__=u,_.__b=u.__b+1,null===(p=w[h])||p&&_.key==p.key&&_.type===p.type){ w[h]=void 0; }else { for(v=0;v<A;v++){if((p=w[v])&&_.key==p.key&&_.type===p.type){w[v]=void 0;break}p=null;} }j(n,_,p=p||e,t,o,r,f,s,a),b=_.__e,(v=_.ref)&&p.ref!=v&&(g||(g=[]),p.ref&&g.push(p.ref,null,_),g.push(v,_.__c||b,_)),null!=b?(null==m&&(m=b),"function"==typeof _.type&&_.__k===p.__k?_.__d=s=x(_,s,n):s=P(n,_,p,w,b,s),"function"==typeof u.type&&(u.__d=s)):s&&p.__e==s&&s.parentNode!=n&&(s=k(p));} }for(u.__e=m,h=A;h--;){ null!=w[h]&&("function"==typeof u.type&&null!=w[h].__e&&w[h].__e==u.__d&&(u.__d=k(i,h+1)),N(w[h],w[h])); }if(g){ for(h=0;h<g.length;h++){ M(g[h],g[++h],g[++h]); } }}function x(n,l,u){for(var i,t=n.__k,o=0;t&&o<t.length;o++){ (i=t[o])&&(i.__=n,l="function"==typeof i.type?x(i,l,u):P(u,i,i,t,i.__e,l)); }return l}function P(n,l,u,i,t,o){var r,f,e;if(void 0!==l.__d){ r=l.__d,l.__d=void 0; }else if(null==u||t!=o||null==t.parentNode){ n:if(null==o||o.parentNode!==n){ n.appendChild(t),r=null; }else {for(f=o,e=0;(f=f.nextSibling)&&e<i.length;e+=2){ if(f==t){ break n; } }n.insertBefore(t,o),r=o;} }return void 0!==r?r:t.nextSibling}function C(n,l,u,i,t){var o;for(o in u){ "children"===o||"key"===o||o in l||H(n,o,null,u[o],i); }for(o in l){ t&&"function"!=typeof l[o]||"children"===o||"key"===o||"value"===o||"checked"===o||u[o]===l[o]||H(n,o,l[o],u[o],i); }}function $(n,l,u){"-"===l[0]?n.setProperty(l,u):n[l]=null==u?"":"number"!=typeof u||s.test(l)?u:u+"px";}function H(n,l,u,i,t){var o;n:if("style"===l){ if("string"==typeof u){ n.style.cssText=u; }else {if("string"==typeof i&&(n.style.cssText=i=""),i){ for(l in i){ u&&l in u||$(n.style,l,""); } }if(u){ for(l in u){ i&&u[l]===i[l]||$(n.style,l,u[l]); } }} }else if("o"===l[0]&&"n"===l[1]){ o=l!==(l=l.replace(/Capture$/,"")),l=l.toLowerCase()in n?l.toLowerCase().slice(2):l.slice(2),n.l||(n.l={}),n.l[l+o]=u,u?i||n.addEventListener(l,o?T:I,o):n.removeEventListener(l,o?T:I,o); }else if("dangerouslySetInnerHTML"!==l){if(t){ l=l.replace(/xlink(H|:h)/,"h").replace(/sName$/,"s"); }else if("href"!==l&&"list"!==l&&"form"!==l&&"tabIndex"!==l&&"download"!==l&&l in n){ try{n[l]=null==u?"":u;break n}catch(n$1){} }"function"==typeof u||(null!=u&&(!1!==u||"a"===l[0]&&"r"===l[1])?n.setAttribute(l,u):n.removeAttribute(l));}}function I(n){this.l[n.type+!1](l.event?l.event(n):n);}function T(n){this.l[n.type+!0](l.event?l.event(n):n);}function j(n,u,i,t,o,r,f,e,c){var s,h,v,y,p,k,b,m,g,x,A,P=u.type;if(void 0!==u.constructor){ return null; }null!=i.__h&&(c=i.__h,e=u.__e=i.__e,u.__h=null,r=[e]),(s=l.__b)&&s(u);try{n:if("function"==typeof P){if(m=u.props,g=(s=P.contextType)&&t[s.__c],x=s?g?g.props.value:s.__:t,i.__c?b=(h=u.__c=i.__c).__=h.__E:("prototype"in P&&P.prototype.render?u.__c=h=new P(m,x):(u.__c=h=new _(m,x),h.constructor=P,h.render=O),g&&g.sub(h),h.props=m,h.state||(h.state={}),h.context=x,h.__n=t,v=h.__d=!0,h.__h=[]),null==h.__s&&(h.__s=h.state),null!=P.getDerivedStateFromProps&&(h.__s==h.state&&(h.__s=a({},h.__s)),a(h.__s,P.getDerivedStateFromProps(m,h.__s))),y=h.props,p=h.state,v){ null==P.getDerivedStateFromProps&&null!=h.componentWillMount&&h.componentWillMount(),null!=h.componentDidMount&&h.__h.push(h.componentDidMount); }else {if(null==P.getDerivedStateFromProps&&m!==y&&null!=h.componentWillReceiveProps&&h.componentWillReceiveProps(m,x),!h.__e&&null!=h.shouldComponentUpdate&&!1===h.shouldComponentUpdate(m,h.__s,x)||u.__v===i.__v){h.props=m,h.state=h.__s,u.__v!==i.__v&&(h.__d=!1),h.__v=u,u.__e=i.__e,u.__k=i.__k,u.__k.forEach(function(n){n&&(n.__=u);}),h.__h.length&&f.push(h);break n}null!=h.componentWillUpdate&&h.componentWillUpdate(m,h.__s,x),null!=h.componentDidUpdate&&h.__h.push(function(){h.componentDidUpdate(y,p,k);});}h.context=x,h.props=m,h.state=h.__s,(s=l.__r)&&s(u),h.__d=!1,h.__v=u,h.__P=n,s=h.render(h.props,h.state,h.context),h.state=h.__s,null!=h.getChildContext&&(t=a(a({},t),h.getChildContext())),v||null==h.getSnapshotBeforeUpdate||(k=h.getSnapshotBeforeUpdate(y,p)),A=null!=s&&s.type===d&&null==s.key?s.props.children:s,w(n,Array.isArray(A)?A:[A],u,i,t,o,r,f,e,c),h.base=u.__e,u.__h=null,h.__h.length&&f.push(h),b&&(h.__E=h.__=null),h.__e=!1;}else { null==r&&u.__v===i.__v?(u.__k=i.__k,u.__e=i.__e):u.__e=L(i.__e,u,i,t,o,r,f,c); }(s=l.diffed)&&s(u);}catch(n$1){u.__v=null,(c||null!=r)&&(u.__e=e,u.__h=!!c,r[r.indexOf(e)]=null),l.__e(n$1,u,i);}}function z(n,u){l.__c&&l.__c(u,n),n.some(function(u){try{n=u.__h,u.__h=[],n.some(function(n){n.call(u);});}catch(n$1){l.__e(n$1,u.__v);}});}function L(l,u,i,t,o,r,f,c){var s,a,v,y=i.props,p=u.props,d=u.type,_=0;if("svg"===d&&(o=!0),null!=r){ for(;_<r.length;_++){ if((s=r[_])&&"setAttribute"in s==!!d&&(d?s.localName===d:3===s.nodeType)){l=s,r[_]=null;break} } }if(null==l){if(null===d){ return document.createTextNode(p); }l=o?document.createElementNS("http://www.w3.org/2000/svg",d):document.createElement(d,p.is&&p),r=null,c=!1;}if(null===d){ y===p||c&&l.data===p||(l.data=p); }else {if(r=r&&n.call(l.childNodes),a=(y=i.props||e).dangerouslySetInnerHTML,v=p.dangerouslySetInnerHTML,!c){if(null!=r){ for(y={},_=0;_<l.attributes.length;_++){ y[l.attributes[_].name]=l.attributes[_].value; } }(v||a)&&(v&&(a&&v.__html==a.__html||v.__html===l.innerHTML)||(l.innerHTML=v&&v.__html||""));}if(C(l,p,y,o,c),v){ u.__k=[]; }else if(_=u.props.children,w(l,Array.isArray(_)?_:[_],u,i,t,o&&"foreignObject"!==d,r,f,r?r[0]:i.__k&&k(i,0),c),null!=r){ for(_=r.length;_--;){ null!=r[_]&&h(r[_]); } }c||("value"in p&&void 0!==(_=p.value)&&(_!==l.value||"progress"===d&&!_||"option"===d&&_!==y.value)&&H(l,"value",_,y.value,!1),"checked"in p&&void 0!==(_=p.checked)&&_!==l.checked&&H(l,"checked",_,y.checked,!1));}return l}function M(n,u,i){try{"function"==typeof n?n(u):n.current=u;}catch(n$1){l.__e(n$1,i);}}function N(n,u,i){var t,o;if(l.unmount&&l.unmount(n),(t=n.ref)&&(t.current&&t.current!==n.__e||M(t,null,u)),null!=(t=n.__c)){if(t.componentWillUnmount){ try{t.componentWillUnmount();}catch(n$1){l.__e(n$1,u);} }t.base=t.__P=null;}if(t=n.__k){ for(o=0;o<t.length;o++){ t[o]&&N(t[o],u,"function"!=typeof n.type); } }i||null==n.__e||h(n.__e),n.__e=n.__d=void 0;}function O(n,l,u){return this.constructor(n,u)}function S(u,i,t){var o,r,f;l.__&&l.__(u,i),r=(o="function"==typeof t)?null:t&&t.__k||i.__k,f=[],j(i,u=(!o&&t||i).__k=v(d,null,[u]),r||e,e,void 0!==i.ownerSVGElement,!o&&t?[t]:r?null:i.firstChild?n.call(i.childNodes):null,f,!o&&t?t:r?r.__e:i.firstChild,o),z(f,u);}n=c.slice,l={__e:function(n,l,u,i){for(var t,o,r;l=l.__;){ if((t=l.__c)&&!t.__){ try{if((o=t.constructor)&&null!=o.getDerivedStateFromError&&(t.setState(o.getDerivedStateFromError(n)),r=t.__d),null!=t.componentDidCatch&&(t.componentDidCatch(n,i||{}),r=t.__d),r){ return t.__E=t }}catch(l$1){n=l$1;} } }throw n}},u=0,_.prototype.setState=function(n,l){var u;u=null!=this.__s&&this.__s!==this.state?this.__s:this.__s=a({},this.state),"function"==typeof n&&(n=n(a({},u),this.props)),n&&a(u,n),null!=n&&this.__v&&(l&&this.__h.push(l),m(this));},_.prototype.forceUpdate=function(n){this.__v&&(this.__e=!0,n&&this.__h.push(n),m(this));},_.prototype.render=d,t=[],o="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,g.__r=0,f=0;
+var n,l,u,i,r,o,e,f,c,s,a,h,p={},v=[],y=/acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,d=Array.isArray;function w(n,l){for(var u in l){ n[u]=l[u]; }return n}function g(n){n&&n.parentNode&&n.parentNode.removeChild(n);}function _(l,u,t){var i,r,o,e={};for(o in u){ "key"==o?i=u[o]:"ref"==o?r=u[o]:e[o]=u[o]; }if(arguments.length>2&&(e.children=arguments.length>3?n.call(arguments,2):t),"function"==typeof l&&null!=l.defaultProps){ for(o in l.defaultProps){ void 0===e[o]&&(e[o]=l.defaultProps[o]); } }return m(l,e,i,r,null)}function m(n,t,i,r,o){var e={type:n,props:t,key:i,ref:r,__k:null,__:null,__b:0,__e:null,__c:null,constructor:void 0,__v:null==o?++u:o,__i:-1,__u:0};return null==o&&null!=l.vnode&&l.vnode(e),e}function k(n){return n.children}function x(n,l){this.props=n,this.context=l;}function S(n,l){if(null==l){ return n.__?S(n.__,n.__i+1):null; }for(var u;l<n.__k.length;l++){ if(null!=(u=n.__k[l])&&null!=u.__e){ return u.__e; } }return "function"==typeof n.type?S(n):null}function C(n){var l,u;if(null!=(n=n.__)&&null!=n.__c){for(n.__e=n.__c.base=null,l=0;l<n.__k.length;l++){ if(null!=(u=n.__k[l])&&null!=u.__e){n.__e=n.__c.base=u.__e;break} }return C(n)}}function M(n){(!n.__d&&(n.__d=!0)&&i.push(n)&&!$.__r++||r!==l.debounceRendering)&&((r=l.debounceRendering)||o)($);}function $(){for(var n,u,t,r,o,f,c,s=1;i.length;){ i.length>s&&i.sort(e),n=i.shift(),s=i.length,n.__d&&(t=void 0,o=(r=(u=n).__v).__e,f=[],c=[],u.__P&&((t=w({},r)).__v=r.__v+1,l.vnode&&l.vnode(t),j(u.__P,t,r,u.__n,u.__P.namespaceURI,32&r.__u?[o]:null,f,null==o?S(r):o,!!(32&r.__u),c),t.__v=r.__v,t.__.__k[t.__i]=t,z(f,t,c),t.__e!=o&&C(t))); }$.__r=0;}function I(n,l,u,t,i,r,o,e,f,c,s){var a,h,y,d,w,g,_=t&&t.__k||v,m=l.length;for(f=P(u,l,_,f,m),a=0;a<m;a++){ null!=(y=u.__k[a])&&(h=-1===y.__i?p:_[y.__i]||p,y.__i=a,g=j(n,y,h,i,r,o,e,f,c,s),d=y.__e,y.ref&&h.ref!=y.ref&&(h.ref&&V(h.ref,null,y),s.push(y.ref,y.__c||d,y)),null==w&&null!=d&&(w=d),4&y.__u||h.__k===y.__k?f=A(y,f,n):"function"==typeof y.type&&void 0!==g?f=g:d&&(f=d.nextSibling),y.__u&=-7); }return u.__e=w,f}function P(n,l,u,t,i){var r,o,e,f,c,s=u.length,a=s,h=0;for(n.__k=new Array(i),r=0;r<i;r++){ null!=(o=l[r])&&"boolean"!=typeof o&&"function"!=typeof o?(f=r+h,(o=n.__k[r]="string"==typeof o||"number"==typeof o||"bigint"==typeof o||o.constructor==String?m(null,o,null,null,null):d(o)?m(k,{children:o},null,null,null):void 0===o.constructor&&o.__b>0?m(o.type,o.props,o.key,o.ref?o.ref:null,o.__v):o).__=n,o.__b=n.__b+1,e=null,-1!==(c=o.__i=L(o,u,f,a))&&(a--,(e=u[c])&&(e.__u|=2)),null==e||null===e.__v?(-1==c&&h--,"function"!=typeof o.type&&(o.__u|=4)):c!=f&&(c==f-1?h--:c==f+1?h++:(c>f?h--:h++,o.__u|=4))):n.__k[r]=null; }if(a){ for(r=0;r<s;r++){ null!=(e=u[r])&&0==(2&e.__u)&&(e.__e==t&&(t=S(e)),q(e,e)); } }return t}function A(n,l,u){var t,i;if("function"==typeof n.type){for(t=n.__k,i=0;t&&i<t.length;i++){ t[i]&&(t[i].__=n,l=A(t[i],l,u)); }return l}n.__e!=l&&(l&&n.type&&!u.contains(l)&&(l=S(n)),u.insertBefore(n.__e,l||null),l=n.__e);do{l=l&&l.nextSibling;}while(null!=l&&8==l.nodeType);return l}function L(n,l,u,t){var i,r,o=n.key,e=n.type,f=l[u];if(null===f||f&&o==f.key&&e===f.type&&0==(2&f.__u)){ return u; }if(t>(null!=f&&0==(2&f.__u)?1:0)){ for(i=u-1,r=u+1;i>=0||r<l.length;){if(i>=0){if((f=l[i])&&0==(2&f.__u)&&o==f.key&&e===f.type){ return i; }i--;}if(r<l.length){if((f=l[r])&&0==(2&f.__u)&&o==f.key&&e===f.type){ return r; }r++;}} }return -1}function T(n,l,u){"-"==l[0]?n.setProperty(l,null==u?"":u):n[l]=null==u?"":"number"!=typeof u||y.test(l)?u:u+"px";}function F(n,l,u,t,i){var r;n:if("style"==l){ if("string"==typeof u){ n.style.cssText=u; }else {if("string"==typeof t&&(n.style.cssText=t=""),t){ for(l in t){ u&&l in u||T(n.style,l,""); } }if(u){ for(l in u){ t&&u[l]===t[l]||T(n.style,l,u[l]); } }} }else if("o"==l[0]&&"n"==l[1]){ r=l!=(l=l.replace(f,"$1")),l=l.toLowerCase()in n||"onFocusOut"==l||"onFocusIn"==l?l.toLowerCase().slice(2):l.slice(2),n.l||(n.l={}),n.l[l+r]=u,u?t?u.u=t.u:(u.u=c,n.addEventListener(l,r?a:s,r)):n.removeEventListener(l,r?a:s,r); }else {if("http://www.w3.org/2000/svg"==i){ l=l.replace(/xlink(H|:h)/,"h").replace(/sName$/,"s"); }else if("width"!=l&&"height"!=l&&"href"!=l&&"list"!=l&&"form"!=l&&"tabIndex"!=l&&"download"!=l&&"rowSpan"!=l&&"colSpan"!=l&&"role"!=l&&"popover"!=l&&l in n){ try{n[l]=null==u?"":u;break n}catch(n$1){} }"function"==typeof u||(null==u||!1===u&&"-"!=l[4]?n.removeAttribute(l):n.setAttribute(l,"popover"==l&&1==u?"":u));}}function O(n){return function(u){if(this.l){var t=this.l[u.type+n];if(null==u.t){ u.t=c++; }else if(u.t<t.u){ return; }return t(l.event?l.event(u):u)}}}function j(n,u,t,i,r,o,e,f,c,s){var a,h,p,v,y,_,m,b,S,C,M,$,P,A,H,L,T,F,O=u.type;if(void 0!==u.constructor){ return null; }128&t.__u&&(c=!!(32&t.__u),o=[f=u.__e=t.__e]),(a=l.__b)&&a(u);n:if("function"==typeof O){ try{if(b=u.props,S="prototype"in O&&O.prototype.render,C=(a=O.contextType)&&i[a.__c],M=a?C?C.props.value:a.__:i,t.__c?m=(h=u.__c=t.__c).__=h.__E:(S?u.__c=h=new O(b,M):(u.__c=h=new x(b,M),h.constructor=O,h.render=B),C&&C.sub(h),h.props=b,h.state||(h.state={}),h.context=M,h.__n=i,p=h.__d=!0,h.__h=[],h._sb=[]),S&&null==h.__s&&(h.__s=h.state),S&&null!=O.getDerivedStateFromProps&&(h.__s==h.state&&(h.__s=w({},h.__s)),w(h.__s,O.getDerivedStateFromProps(b,h.__s))),v=h.props,y=h.state,h.__v=u,p){ S&&null==O.getDerivedStateFromProps&&null!=h.componentWillMount&&h.componentWillMount(),S&&null!=h.componentDidMount&&h.__h.push(h.componentDidMount); }else {if(S&&null==O.getDerivedStateFromProps&&b!==v&&null!=h.componentWillReceiveProps&&h.componentWillReceiveProps(b,M),!h.__e&&(null!=h.shouldComponentUpdate&&!1===h.shouldComponentUpdate(b,h.__s,M)||u.__v==t.__v)){for(u.__v!=t.__v&&(h.props=b,h.state=h.__s,h.__d=!1),u.__e=t.__e,u.__k=t.__k,u.__k.some(function(n){n&&(n.__=u);}),$=0;$<h._sb.length;$++){ h.__h.push(h._sb[$]); }h._sb=[],h.__h.length&&e.push(h);break n}null!=h.componentWillUpdate&&h.componentWillUpdate(b,h.__s,M),S&&null!=h.componentDidUpdate&&h.__h.push(function(){h.componentDidUpdate(v,y,_);});}if(h.context=M,h.props=b,h.__P=n,h.__e=!1,P=l.__r,A=0,S){for(h.state=h.__s,h.__d=!1,P&&P(u),a=h.render(h.props,h.state,h.context),H=0;H<h._sb.length;H++){ h.__h.push(h._sb[H]); }h._sb=[];}else { do{h.__d=!1,P&&P(u),a=h.render(h.props,h.state,h.context),h.state=h.__s;}while(h.__d&&++A<25); }h.state=h.__s,null!=h.getChildContext&&(i=w(w({},i),h.getChildContext())),S&&!p&&null!=h.getSnapshotBeforeUpdate&&(_=h.getSnapshotBeforeUpdate(v,y)),T=(L=null!=a&&a.type===k&&null==a.key)?a.props.children:a,L&&(a.props.children=null),f=I(n,d(T)?T:[T],u,t,i,r,o,e,f,c,s),h.base=u.__e,u.__u&=-161,h.__h.length&&e.push(h),m&&(h.__E=h.__=null);}catch(n$1){if(u.__v=null,c||null!=o){ if(n$1.then){for(u.__u|=c?160:128;f&&8==f.nodeType&&f.nextSibling;){ f=f.nextSibling; }o[o.indexOf(f)]=null,u.__e=f;}else { for(F=o.length;F--;){ g(o[F]); } } }else { u.__e=t.__e,u.__k=t.__k; }l.__e(n$1,u,t);} }else { null==o&&u.__v==t.__v?(u.__k=t.__k,u.__e=t.__e):f=u.__e=N(t.__e,u,t,i,r,o,e,c,s); }return (a=l.diffed)&&a(u),128&u.__u?void 0:f}function z(n,u,t){for(var i=0;i<t.length;i++){ V(t[i],t[++i],t[++i]); }l.__c&&l.__c(u,n),n.some(function(u){try{n=u.__h,u.__h=[],n.some(function(n){n.call(u);});}catch(n$1){l.__e(n$1,u.__v);}});}function N(u,t,i,r,o,e,f,c,s){var a,h,v,y,w,_,m,b=i.props,k=t.props,x=t.type;if("svg"==x?o="http://www.w3.org/2000/svg":"math"==x?o="http://www.w3.org/1998/Math/MathML":o||(o="http://www.w3.org/1999/xhtml"),null!=e){ for(a=0;a<e.length;a++){ if((w=e[a])&&"setAttribute"in w==!!x&&(x?w.localName==x:3==w.nodeType)){u=w,e[a]=null;break} } }if(null==u){if(null==x){ return document.createTextNode(k); }u=document.createElementNS(o,x,k.is&&k),c&&(l.__m&&l.__m(t,e),c=!1),e=null;}if(null===x){ b===k||c&&u.data===k||(u.data=k); }else {if(e=e&&n.call(u.childNodes),b=i.props||p,!c&&null!=e){ for(b={},a=0;a<u.attributes.length;a++){ b[(w=u.attributes[a]).name]=w.value; } }for(a in b){ if(w=b[a],"children"==a);else if("dangerouslySetInnerHTML"==a){ v=w; }else if(!(a in k)){if("value"==a&&"defaultValue"in k||"checked"==a&&"defaultChecked"in k){ continue; }F(u,a,null,w,o);} }for(a in k){ w=k[a],"children"==a?y=w:"dangerouslySetInnerHTML"==a?h=w:"value"==a?_=w:"checked"==a?m=w:c&&"function"!=typeof w||b[a]===w||F(u,a,w,b[a],o); }if(h){ c||v&&(h.__html===v.__html||h.__html===u.innerHTML)||(u.innerHTML=h.__html),t.__k=[]; }else if(v&&(u.innerHTML=""),I("template"===t.type?u.content:u,d(y)?y:[y],t,i,r,"foreignObject"==x?"http://www.w3.org/1999/xhtml":o,e,f,e?e[0]:i.__k&&S(i,0),c,s),null!=e){ for(a=e.length;a--;){ g(e[a]); } }c||(a="value","progress"==x&&null==_?u.removeAttribute("value"):void 0!==_&&(_!==u[a]||"progress"==x&&!_||"option"==x&&_!==b[a])&&F(u,a,_,b[a],o),a="checked",void 0!==m&&m!==u[a]&&F(u,a,m,b[a],o));}return u}function V(n,u,t){try{if("function"==typeof n){var i="function"==typeof n.__u;i&&n.__u(),i&&null==u||(n.__u=n(u));}else { n.current=u; }}catch(n$1){l.__e(n$1,t);}}function q(n,u,t){var i,r;if(l.unmount&&l.unmount(n),(i=n.ref)&&(i.current&&i.current!==n.__e||V(i,null,u)),null!=(i=n.__c)){if(i.componentWillUnmount){ try{i.componentWillUnmount();}catch(n$1){l.__e(n$1,u);} }i.base=i.__P=null;}if(i=n.__k){ for(r=0;r<i.length;r++){ i[r]&&q(i[r],u,t||"function"!=typeof n.type); } }t||g(n.__e),n.__c=n.__=n.__e=void 0;}function B(n,l,u){return this.constructor(n,u)}function D(u,t,i){var r,o,e,f;t==document&&(t=document.documentElement),l.__&&l.__(u,t),o=(r="function"==typeof i)?null:i&&i.__k||t.__k,e=[],f=[],j(t,u=(!r&&i||t).__k=_(k,null,[u]),o||p,p,t.namespaceURI,!r&&i?[i]:o?null:t.firstChild?n.call(t.childNodes):null,e,!r&&i?i:o?o.__e:t.firstChild,r,f),z(e,u,f);}n=v.slice,l={__e:function(n,l,u,t){for(var i,r,o;l=l.__;){ if((i=l.__c)&&!i.__){ try{if((r=i.constructor)&&null!=r.getDerivedStateFromError&&(i.setState(r.getDerivedStateFromError(n)),o=i.__d),null!=i.componentDidCatch&&(i.componentDidCatch(n,t||{}),o=i.__d),o){ return i.__E=i }}catch(l$1){n=l$1;} } }throw n}},u=0,x.prototype.setState=function(n,l){var u;u=null!=this.__s&&this.__s!==this.state?this.__s:this.__s=w({},this.state),"function"==typeof n&&(n=n(w({},u),this.props)),n&&w(u,n),null!=n&&this.__v&&(l&&this._sb.push(l),M(this));},x.prototype.forceUpdate=function(n){this.__v&&(this.__e=!0,n&&this.__h.push(n),M(this));},x.prototype.render=k,i=[],o="function"==typeof Promise?Promise.prototype.then.bind(Promise.resolve()):setTimeout,e=function(n,l){return n.__v.__b-l.__v.__b},$.__r=0,f=/(PointerCapture)$|Capture$/i,c=0,s=O(!1),a=O(!0),h=0;
 
 function _defineProperties(target, props) {
   for (var i = 0; i < props.length; i++) {
@@ -1393,7 +1393,7 @@ var IroComponentWrapper = /*@__PURE__*/(function (Component) {
         if (props.index > 0) {
             rootStyles[isHorizontal ? 'marginLeft' : 'marginTop'] = margin;
         }
-        return (v(d, null, props.children(this.uid, rootProps, rootStyles)));
+        return (_(k, null, props.children(this.uid, rootProps, rootStyles)));
     };
     // More info on handleEvent:
     // https://medium.com/@WebReflection/dom-handleevent-a-cross-platform-standard-since-year-2000-5bf17287fd38
@@ -1436,14 +1436,14 @@ var IroComponentWrapper = /*@__PURE__*/(function (Component) {
     };
 
     return IroComponentWrapper;
-}(_));
+}(x));
 
 function IroHandle(props) {
     var radius = props.r;
     var url = props.url;
     var cx = radius;
     var cy = radius;
-    return (v("svg", { className: ("IroHandle IroHandle--" + (props.index) + " " + (props.isActive ? 'IroHandle--isActive' : '')), style: {
+    return (_("svg", { className: ("IroHandle IroHandle--" + (props.index) + " " + (props.isActive ? 'IroHandle--isActive' : '')), style: {
             transform: ("translate(" + (cssValue(props.x)) + ", " + (cssValue(props.y)) + ")"),
             willChange: 'transform',
             top: cssValue(-radius),
@@ -1453,9 +1453,9 @@ function IroHandle(props) {
             position: 'absolute',
             overflow: 'visible'
         } },
-        url && (v("use", Object.assign({ xlinkHref: resolveSvgUrl(url) }, props.props))),
-        !url && (v("circle", { cx: cx, cy: cy, r: radius, fill: "none", "stroke-width": 2, stroke: "#000" })),
-        !url && (v("circle", { cx: cx, cy: cy, r: radius - 2, fill: props.fill, "stroke-width": 2, stroke: "#fff" }))));
+        url && (_("use", Object.assign({ xlinkHref: resolveSvgUrl(url) }, props.props))),
+        !url && (_("circle", { cx: cx, cy: cy, r: radius, fill: "none", "stroke-width": 2, stroke: "#000" })),
+        !url && (_("circle", { cx: cx, cy: cy, r: radius - 2, fill: props.fill, "stroke-width": 2, stroke: "#fff" }))));
 }
 IroHandle.defaultProps = {
     fill: 'none',
@@ -1466,7 +1466,7 @@ IroHandle.defaultProps = {
     props: { x: 0, y: 0 }
 };
 
-var t$1,u$1,r$1,o$1=0,i=[],c$1=l.__b,f$1=l.__r,e$1=l.diffed,a$1=l.__c,v$1=l.unmount;function l$1(t,r){l.__h&&l.__h(u$1,t,o$1||r),o$1=0;var i=u$1.__H||(u$1.__H={__:[],__h:[]});return t>=i.__.length&&i.__.push({}),i.__[t]}function m$1(n){return o$1=1,p(w$1,n)}function p(n,r,o){var i=l$1(t$1++,2);return i.t=n,i.__c||(i.__=[o?o(r):w$1(void 0,r),function(n){var t=i.t(i.__[0],n);i.__[0]!==t&&(i.__=[t,i.__[1]],i.__c.setState({}));}],i.__c=u$1),i.__}function _$1(n,u){var r=l$1(t$1++,7);return k$1(r.__H,u)&&(r.__=n(),r.__H=u,r.__h=n),r.__}function A(n,t){return o$1=8,_$1(function(){return n},t)}function x$1(){for(var t;t=i.shift();){ if(t.__P){ try{t.__H.__h.forEach(g$1),t.__H.__h.forEach(j$1),t.__H.__h=[];}catch(u){t.__H.__h=[],l.__e(u,t.__v);} } }}l.__b=function(n){u$1=null,c$1&&c$1(n);},l.__r=function(n){f$1&&f$1(n),t$1=0;var r=(u$1=n.__c).__H;r&&(r.__h.forEach(g$1),r.__h.forEach(j$1),r.__h=[]);},l.diffed=function(t){e$1&&e$1(t);var o=t.__c;o&&o.__H&&o.__H.__h.length&&(1!==i.push(o)&&r$1===l.requestAnimationFrame||((r$1=l.requestAnimationFrame)||function(n){var t,u=function(){clearTimeout(r),b$1&&cancelAnimationFrame(t),setTimeout(n);},r=setTimeout(u,100);b$1&&(t=requestAnimationFrame(u));})(x$1)),u$1=null;},l.__c=function(t,u){u.some(function(t){try{t.__h.forEach(g$1),t.__h=t.__h.filter(function(n){return !n.__||j$1(n)});}catch(r){u.some(function(n){n.__h&&(n.__h=[]);}),u=[],l.__e(r,t.__v);}}),a$1&&a$1(t,u);},l.unmount=function(t){v$1&&v$1(t);var u,r=t.__c;r&&r.__H&&(r.__H.__.forEach(function(n){try{g$1(n);}catch(n$1){u=n$1;}}),u&&l.__e(u,r.__v));};var b$1="function"==typeof requestAnimationFrame;function g$1(n){var t=u$1,r=n.__c;"function"==typeof r&&(n.__c=void 0,r()),u$1=t;}function j$1(n){var t=u$1;n.__c=n.__(),u$1=t;}function k$1(n,t){return !n||n.length!==t.length||t.some(function(t,u){return t!==n[u]})}function w$1(n,t){return "function"==typeof t?t(n):t}
+var t,r$1,u$1,i$1,o$1=0,f$1=[],c$1=l,e$1=c$1.__b,a$1=c$1.__r,v$1=c$1.diffed,l$1=c$1.__c,m$1=c$1.unmount,s$1=c$1.__;function p$1(n,t){c$1.__h&&c$1.__h(r$1,n,o$1||t),o$1=0;var u=r$1.__H||(r$1.__H={__:[],__h:[]});return n>=u.__.length&&u.__.push({}),u.__[n]}function d$1(n){return o$1=1,h$1(D$1,n)}function h$1(n,u,i){var o=p$1(t++,2);if(o.t=n,!o.__c&&(o.__=[i?i(u):D$1(void 0,u),function(n){var t=o.__N?o.__N[0]:o.__[0],r=o.t(t,n);t!==r&&(o.__N=[r,o.__[1]],o.__c.setState({}));}],o.__c=r$1,!r$1.__f)){var f=function(n,t,r){if(!o.__c.__H){ return !0; }var u=o.__c.__H.__.filter(function(n){return !!n.__c});if(u.every(function(n){return !n.__N})){ return !c||c.call(this,n,t,r); }var i=o.__c.props!==n;return u.forEach(function(n){if(n.__N){var t=n.__[0];n.__=n.__N,n.__N=void 0,t!==n.__[0]&&(i=!0);}}),c&&c.call(this,n,t,r)||i};r$1.__f=!0;var c=r$1.shouldComponentUpdate,e=r$1.componentWillUpdate;r$1.componentWillUpdate=function(n,t,r){if(this.__e){var u=c;c=void 0,f(n,t,r),c=u;}e&&e.call(this,n,t,r);},r$1.shouldComponentUpdate=f;}return o.__N||o.__}function T$1(n,r){var u=p$1(t++,7);return C$1(u.__H,r)&&(u.__=n(),u.__H=r,u.__h=n),u.__}function q$1(n,t){return o$1=8,T$1(function(){return n},t)}function j$1(){for(var n;n=f$1.shift();){ if(n.__P&&n.__H){ try{n.__H.__h.forEach(z$1),n.__H.__h.forEach(B$1),n.__H.__h=[];}catch(t){n.__H.__h=[],c$1.__e(t,n.__v);} } }}c$1.__b=function(n){r$1=null,e$1&&e$1(n);},c$1.__=function(n,t){n&&t.__k&&t.__k.__m&&(n.__m=t.__k.__m),s$1&&s$1(n,t);},c$1.__r=function(n){a$1&&a$1(n),t=0;var i=(r$1=n.__c).__H;i&&(u$1===r$1?(i.__h=[],r$1.__h=[],i.__.forEach(function(n){n.__N&&(n.__=n.__N),n.u=n.__N=void 0;})):(i.__h.forEach(z$1),i.__h.forEach(B$1),i.__h=[],t=0)),u$1=r$1;},c$1.diffed=function(n){v$1&&v$1(n);var t=n.__c;t&&t.__H&&(t.__H.__h.length&&(1!==f$1.push(t)&&i$1===c$1.requestAnimationFrame||((i$1=c$1.requestAnimationFrame)||w$1)(j$1)),t.__H.__.forEach(function(n){n.u&&(n.__H=n.u),n.u=void 0;})),u$1=r$1=null;},c$1.__c=function(n,t){t.some(function(n){try{n.__h.forEach(z$1),n.__h=n.__h.filter(function(n){return !n.__||B$1(n)});}catch(r){t.some(function(n){n.__h&&(n.__h=[]);}),t=[],c$1.__e(r,n.__v);}}),l$1&&l$1(n,t);},c$1.unmount=function(n){m$1&&m$1(n);var t,r=n.__c;r&&r.__H&&(r.__H.__.forEach(function(n){try{z$1(n);}catch(n$1){t=n$1;}}),r.__H=void 0,t&&c$1.__e(t,r.__v));};var k$1="function"==typeof requestAnimationFrame;function w$1(n){var t,r=function(){clearTimeout(u),k$1&&cancelAnimationFrame(t),setTimeout(n);},u=setTimeout(r,100);k$1&&(t=requestAnimationFrame(r));}function z$1(n){var t=r$1,u=n.__c;"function"==typeof u&&(n.__c=void 0,u()),r$1=t;}function B$1(n){var t=r$1;n.__c=n.__(),r$1=t;}function C$1(n,t){return !n||n.length!==t.length||t.some(function(t,r){return t!==n[r]})}function D$1(n,t){return "function"==typeof t?t(n):t}
 
 function IroInput(props) {
     var disabled = props.disabled;
@@ -1475,12 +1475,12 @@ function IroInput(props) {
     var inputWidth = ref.inputWidth;
     var fontSize = ref.fontSize;
     var activeColor = props.activeColor;
-    var ref$1 = m$1(activeColor[props.sliderType]);
+    var ref$1 = d$1(activeColor[props.sliderType]);
     var sliderValue = ref$1[0];
     var setSliderValue = ref$1[1];
     var val = (type === 'alpha') ? activeColor[props.sliderType].toFixed(2) : Math.round(activeColor[props.sliderType]);
     setSliderValue(val);
-    var onKeypress = A(function (e) {
+    var onKeypress = q$1(function (e) {
         var value = getSliderValueFromInputField(e);
         if (type === 'kelvin') {
             var strlen = value.toString().length, minlen = props.minTemperature.toString().length, maxlen = props.maxTemperature.toString().length;
@@ -1511,14 +1511,14 @@ function IroInput(props) {
         }
         return value;
     }, [setSliderValue, props.sliderType]);
-    var onPaste = A(function (e) {
+    var onPaste = q$1(function (e) {
         e.preventDefault();
         var value = getSliderValueFromClipboard(props, e);
         activeColor[props.sliderType] = value;
         return value;
     }, [setSliderValue, props.sliderType]);
-    return (v("div", { className: "IroSliderValue" },
-        v("input", { onKeyPress: onKeypress, onPaste: onPaste, className: "IroSliderInput", style: {
+    return (_("div", { className: "IroSliderValue" },
+        _("input", { onKeyPress: onKeypress, onPaste: onPaste, className: "IroSliderInput", style: {
                 display: 'inline-block',
                 width: type === 'kelvin' ? cssValue(40) : inputWidth,
                 height: cssValue(18),
@@ -1532,7 +1532,7 @@ IroInput.defaultProps = {
 
 function IroLabel(props) {
     var name = props.sliderType[0].toUpperCase();
-    return (v("div", { className: "IroSliderLabel", style: {
+    return (_("div", { className: "IroSliderLabel", style: {
             display: 'inline-block',
             width: cssValue(10),
             height: cssValue(12),
@@ -1559,15 +1559,15 @@ function IroSlider(props) {
         }
         props.onInput(type, props.id);
     }
-    return (v(IroComponentWrapper, Object.assign({}, props, { onInput: handleInput }), function (uid, rootProps, rootStyles) { return (
+    return (_(IroComponentWrapper, Object.assign({}, props, { onInput: handleInput }), function (uid, rootProps, rootStyles) { return (
     // add wrapper element
-    v("div", { className: "IroSliderWrapper", style: Object.assign({}, {width: props.layoutDirection === 'vertical' ? cssValue(props.width) : 'unset',
+    _("div", { className: "IroSliderWrapper", style: Object.assign({}, {width: props.layoutDirection === 'vertical' ? cssValue(props.width) : 'unset',
             height: props.layoutDirection === 'horizontal' ? cssValue(props.width) : 'unset',
             flexDirection: props.layoutDirection === 'horizontal' ? 'column' : 'row',
             alignItems: 'center',
             justifyContent: 'space-between'},
             rootStyles) },
-        v("div", Object.assign({}, rootProps, { className: "IroSlider", style: {
+        _("div", Object.assign({}, rootProps, { className: "IroSlider", style: {
                 position: 'relative',
                 display: 'block',
                 width: cssValue(width),
@@ -1577,7 +1577,7 @@ function IroSlider(props) {
                 background: "conic-gradient(#ccc 25%, #fff 0 50%, #ccc 0 75%, #fff 0)",
                 backgroundSize: '8px 8px',
             } }),
-            v("div", { className: "IroSliderGradient", style: Object.assign({}, {position: 'absolute',
+            _("div", { className: "IroSliderGradient", style: Object.assign({}, {position: 'absolute',
                     top: 0,
                     left: 0,
                     width: "100%",
@@ -1585,9 +1585,9 @@ function IroSlider(props) {
                     borderRadius: cssValue(radius),
                     background: cssGradient('linear', props.layoutDirection === 'horizontal' ? 'to top' : 'to right', gradient)},
                     cssBorderStyles(props)) }),
-            v(IroHandle, { isActive: true, index: activeColor.index, r: props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePos.x, y: handlePos.y })),
-        props.showLabel && (v(IroLabel, { sliderType: props.sliderType, layoutDirection: props.layoutDirection, handleRadius: props.handleRadius })),
-        props.showInput && (v(IroInput, { disabled: props.disabled, sliderType: props.sliderType, sliderSize: props.sliderSize, activeColor: activeColor, handleRadius: props.handleRadius, layoutDirection: props.layoutDirection, minTemperature: props.minTemperature, maxTemperature: props.maxTemperature })))); }));
+            _(IroHandle, { isActive: true, index: activeColor.index, r: props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePos.x, y: handlePos.y })),
+        props.showLabel && (_(IroLabel, { sliderType: props.sliderType, layoutDirection: props.layoutDirection, handleRadius: props.handleRadius })),
+        props.showInput && (_(IroInput, { disabled: props.disabled, sliderType: props.sliderType, sliderSize: props.sliderSize, activeColor: activeColor, handleRadius: props.handleRadius, layoutDirection: props.layoutDirection, minTemperature: props.minTemperature, maxTemperature: props.maxTemperature })))); }));
 }
 IroSlider.defaultProps = Object.assign({}, sliderDefaultOptions);
 
@@ -1625,19 +1625,19 @@ function IroBox(props) {
         // let the color picker fire input:start, input:move or input:end events
         props.onInput(inputType, props.id);
     }
-    return (v(IroComponentWrapper, Object.assign({}, props, { onInput: handleInput }), function (uid, rootProps, rootStyles) { return (v("div", Object.assign({}, rootProps, { className: "IroBox", style: Object.assign({}, {width: cssValue(width),
+    return (_(IroComponentWrapper, Object.assign({}, props, { onInput: handleInput }), function (uid, rootProps, rootStyles) { return (_("div", Object.assign({}, rootProps, { className: "IroBox", style: Object.assign({}, {width: cssValue(width),
             height: cssValue(height),
             position: 'relative'},
             rootStyles) }),
-        v("div", { className: "IroBox", style: Object.assign({}, {width: '100%',
+        _("div", { className: "IroBox", style: Object.assign({}, {width: '100%',
                 height: '100%',
                 borderRadius: cssValue(radius)},
                 cssBorderStyles(props),
                 {background: cssGradient('linear', 'to bottom', gradients[1])
                     + ',' +
                     cssGradient('linear', 'to right', gradients[0])}) }),
-        colors.filter(function (color) { return color !== activeColor; }).map(function (color) { return (v(IroHandle, { isActive: false, index: color.index, fill: color.hslString, r: props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[color.index].x, y: handlePositions[color.index].y })); }),
-        v(IroHandle, { isActive: true, index: activeColor.index, fill: activeColor.hslString, r: props.activeHandleRadius || props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[activeColor.index].x, y: handlePositions[activeColor.index].y }))); }));
+        colors.filter(function (color) { return color !== activeColor; }).map(function (color) { return (_(IroHandle, { isActive: false, index: color.index, fill: color.hslString, r: props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[color.index].x, y: handlePositions[color.index].y })); }),
+        _(IroHandle, { isActive: true, index: activeColor.index, fill: activeColor.hslString, r: props.activeHandleRadius || props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[activeColor.index].x, y: handlePositions[activeColor.index].y }))); }));
 }
 
 var HUE_GRADIENT_CLOCKWISE = 'conic-gradient(red, yellow, lime, aqua, blue, magenta, red)';
@@ -1689,22 +1689,22 @@ function IroWheel(props) {
         // let the color picker fire input:start, input:move or input:end events
         props.onInput(inputType, props.id);
     }
-    return (v(IroComponentWrapper, Object.assign({}, props, { onInput: handleInput }), function (uid, rootProps, rootStyles) { return (v("div", Object.assign({}, rootProps, { className: "IroWheel", style: Object.assign({}, {width: cssValue(width),
+    return (_(IroComponentWrapper, Object.assign({}, props, { onInput: handleInput }), function (uid, rootProps, rootStyles) { return (_("div", Object.assign({}, rootProps, { className: "IroWheel", style: Object.assign({}, {width: cssValue(width),
             height: cssValue(width),
             position: 'relative'},
             rootStyles) }),
-        v("div", { className: "IroWheelHue", style: Object.assign({}, circleStyles,
+        _("div", { className: "IroWheelHue", style: Object.assign({}, circleStyles,
                 {transform: ("rotateZ(" + (props.wheelAngle + 90) + "deg)"),
                 background: props.wheelDirection === 'clockwise' ? HUE_GRADIENT_CLOCKWISE : HUE_GRADIENT_ANTICLOCKWISE}) }),
-        v("div", { className: "IroWheelSaturation", style: Object.assign({}, circleStyles,
+        _("div", { className: "IroWheelSaturation", style: Object.assign({}, circleStyles,
                 {background: 'radial-gradient(circle closest-side, #fff, transparent)'}) }),
-        props.wheelLightness && (v("div", { className: "IroWheelLightness", style: Object.assign({}, circleStyles,
+        props.wheelLightness && (_("div", { className: "IroWheelLightness", style: Object.assign({}, circleStyles,
                 {background: '#000',
                 opacity: 1 - hsv.v / 100}) })),
-        v("div", { className: "IroWheelBorder", style: Object.assign({}, circleStyles,
+        _("div", { className: "IroWheelBorder", style: Object.assign({}, circleStyles,
                 cssBorderStyles(props)) }),
-        colors.filter(function (color) { return color !== activeColor; }).map(function (color) { return (v(IroHandle, { isActive: false, index: color.index, fill: color.hslString, r: props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[color.index].x, y: handlePositions[color.index].y })); }),
-        v(IroHandle, { isActive: true, index: activeColor.index, fill: activeColor.hslString, r: props.activeHandleRadius || props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[activeColor.index].x, y: handlePositions[activeColor.index].y }))); }));
+        colors.filter(function (color) { return color !== activeColor; }).map(function (color) { return (_(IroHandle, { isActive: false, index: color.index, fill: color.hslString, r: props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[color.index].x, y: handlePositions[color.index].y })); }),
+        _(IroHandle, { isActive: true, index: activeColor.index, fill: activeColor.hslString, r: props.activeHandleRadius || props.handleRadius, url: props.handleSvg, props: props.handleProps, x: handlePositions[activeColor.index].x, y: handlePositions[activeColor.index].y }))); }));
 }
 
 function createWidget(WidgetComponent) {
@@ -1712,7 +1712,7 @@ function createWidget(WidgetComponent) {
         var widget; // will become an instance of the widget component class
         var widgetRoot = document.createElement('div');
         // Render widget into a temp DOM node
-        S(v(WidgetComponent, Object.assign({}, {ref: function (ref) { return widget = ref; }},
+        D(_(WidgetComponent, Object.assign({}, {ref: function (ref) { return widget = ref; }},
             props)), widgetRoot);
         function mountWidget() {
             var container = parent instanceof Element ? parent : document.querySelector(parent);
@@ -1989,19 +1989,19 @@ var IroColorPicker = /*@__PURE__*/(function (Component) {
                 });
             }
         }
-        return (v("div", { class: "IroColorPicker", id: state.id, style: {
+        return (_("div", { class: "IroColorPicker", id: state.id, style: {
                 display: state.display,
                 flexDirection: props.layoutDirection === 'horizontal' ? 'row' : 'column'
             } }, layout.map(function (ref, componentIndex) {
                 var UiComponent = ref.component;
                 var options = ref.options;
 
-                return (v(UiComponent, Object.assign({}, state, options, { ref: undefined, onInput: this$1.emitInputEvent.bind(this$1), parent: this$1, index: componentIndex })));
+                return (_(UiComponent, Object.assign({}, state, options, { ref: undefined, onInput: this$1.emitInputEvent.bind(this$1), parent: this$1, index: componentIndex })));
         })));
     };
 
     return IroColorPicker;
-}(_));
+}(x));
 IroColorPicker.defaultProps = Object.assign({}, iroColorPickerOptionDefaults,
     {colors: [],
     display: 'flex',
@@ -2017,7 +2017,7 @@ var iro;
     iro.ColorPicker = IroColorPickerWidget;
     var ui;
     (function (ui) {
-        ui.h = v;
+        ui.h = _;
         ui.ComponentBase = IroComponentWrapper;
         ui.Handle = IroHandle;
         ui.Slider = IroSlider;
